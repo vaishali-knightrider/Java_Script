@@ -1,4 +1,6 @@
-/*console.log("Hey! Vaishali");
+console.log("Hey! Vaishali");
+
+/*
 let age=25;
 age=50;
 
