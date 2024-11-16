@@ -5,6 +5,7 @@ let msgContainer=document.querySelector(".msg-container");
 let msg=document.querySelector("#msg");
 
 let turnO=true;//player X,player Y
+let counter=0;
 
 const winPatterns=[
     [0,1,2],
@@ -17,8 +18,16 @@ const winPatterns=[
     [6,7,8],
 ];
 
+const gameDraw  = () =>{
+    
+    msg.innerText = `It's a Draw.`;
+    msgContainer.classList.remove("hide");
+    disableBoxes();
+};  
+   
 const resetGame=()=>{
     turnO=true;
+    counter=0;
     enableBoxes();
     msgContainer.classList.add("hide");
 };
@@ -29,15 +38,22 @@ boxes.forEach((box)=>{
         if(turnO)
         {
             box.innerText="O";
+            box.style.color = "maroon";
             turnO=false;//dusre ki turn aa gyi ab
         }
         else{
             box.innerText="X";
+            box.style.color = "green";
             turnO=true;
         }
         box.disabled=true;
+        counter++;
 
-        checkWinner();
+        let isWinner= checkWinner();
+        if(counter === 9 && !isWinner)
+        {
+            gameDraw();
+        }
     });
 });
 
