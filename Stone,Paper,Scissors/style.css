@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    background-color: #c99ca3; /* Change this to your desired color */
+}
+    
+h1{
+    background-color:#0f0d0d;
+    color: #fff;
+    height:5rem;
+    line-height: 5rem;
+    text-align: center;
+}
+
+.choice{
+    height: 165px;
+    width: 165px;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    height:100px;
+    width:100px;
+    object-fit:cover;/* so that images dont get distorted*/
+    border-radius: 50%;
+}
+
+.choices{
+    display: flex;/*to bring the images from hori to verti*/
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+    margin-top:5rem;
+    background-color: rgba(127, 34, 34, 0.858);
+}
+
+/* when we hover on the images it must get blurr*/
+.choice:hover {
+    opacity:0.5;
+    cursor: pointer;
+    background-color: rgba(4, 4, 4, 0.858);
+}
+
+.score-board{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    font-size:2rem;
+    margin-top:3rem;
+    gap: 4rem;
+}
+#user-score, 
+#comp-score{
+
+    font-size: 4rem;
+}
+
+#msg{
+   
+    background-color: #081b31;
+    color:#fff;
+    font-size:2rem;
+    display:inline;
+    border-radius: 1rem ;
+    padding: 1rem;
+}
+
+.msg-container {
+   
+    margin-top: 2rem;
+    display: grid; /* Enables Grid */
+    place-items: center; /* Centers content horizontally and vertically */
+  
+}
+
+
